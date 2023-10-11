@@ -37,7 +37,7 @@ function Collection() {
     
     
     const params = useParams();
-    console.log(params)
+    
 
 
 
@@ -73,7 +73,7 @@ function Collection() {
                 );
             }
             if (selectedPriceRanges.length > 0) {
-                console.log('entered')
+               
                 newFilteredProducts = newFilteredProducts.filter((product) =>
                     selectedPriceRanges.some(
                         (range) =>

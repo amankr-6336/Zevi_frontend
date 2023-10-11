@@ -2,7 +2,7 @@ import React from 'react'
 import './SuggestionCard.scss'
 
 function SuggestionCard({product}) {
-    console.log(product)
+    
   return (
     <div className="suggestion_card">
         <div className="innersuggestion_card">

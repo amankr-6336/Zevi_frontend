@@ -16,11 +16,11 @@ function Home() {
   const navigate = useNavigate();
 
   const products = useSelector(state => state.appConfigReducer.products);
-  console.log(products);
+  
   const topProducts = products?.filter(product => product.ratingcount > 800);
-  console.log(topProducts);
+ 
   const uniqueCategories = [...new Set(products?.map(product => product.style))];
-  console.log(uniqueCategories);
+  
 
   function handleSubmit() {
     navigate(`/collection/${input}`);
