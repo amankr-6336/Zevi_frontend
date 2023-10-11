@@ -1,19 +1,29 @@
 import React from 'react'
 import './ProductCard.scss'
-import { AiOutlineHeart} from 'react-icons/ai'
+import { AiOutlineHeart,AiFillHeart} from 'react-icons/ai'
 import Rating from './Rating'
+import { useState } from 'react'
 
 function ProductCard({ product }) {
 
-    
+    const [wishlistStatus, setWishlistStatus] = useState({});
+
+    const toggleWishlist = (productId) => {
+        setWishlistStatus((prevWishlistStatus) => ({
+          ...prevWishlistStatus,
+          [productId]: !prevWishlistStatus[productId],
+        }));
+      };
 
 
     return (
-        <div className="Product" >
+        <div className="Product"   onClick={() => toggleWishlist(product.id)}>
             <div className="product-container">
                 <div className="wishlist">
-                    {/* <AiFillHeart className='wishlist_icon1'/> */}
+                {  wishlistStatus[product.id] ?
+                    <AiFillHeart className='wishlist_icon1'/>:
                   <AiOutlineHeart className="wishlist_icon"/>
+                }
                    
                 </div>
                 <div className="product-img">

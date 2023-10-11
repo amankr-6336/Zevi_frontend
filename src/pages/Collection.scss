@@ -246,6 +246,7 @@
             .filter_and_productlist{
                 position: relative;
                 overflow-x: hidden;
+                min-height: 500px;
                 // border: 2px solid red;
                 .filtericon{
                     display: block;
