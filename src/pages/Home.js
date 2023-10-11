@@ -47,7 +47,7 @@ function Home() {
         <img src={backg} alt="" />
         <div className="search_section">
           <form onSubmit={handleSubmit}>
-            <input autocomplete="off" onClick={handleToggle} onChange={(e) =>handleChange(e)} type="text" placeholder="Search.." name="search" />
+            <input autoComplete="off" onClick={handleToggle} onChange={(e) =>handleChange(e)} type="text" placeholder="Search.." name="search" />
             <button type="submit"><CiSearch id='searchicon' /></button>
           </form>
           <div className={open?"suggestion_box":"suggestion_boxc"}>
