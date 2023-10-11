@@ -61,6 +61,15 @@ function Collection() {
                 );
             }
 
+            if(change){
+                newFilteredProducts = products.filter(
+                    (product) =>
+                        product.name.replace(/\s/g, '').toLowerCase().includes(change.toLowerCase()) ||
+                        product.style.toLowerCase().includes(change.toLowerCase()) ||
+                        product.category.toLowerCase().includes(change.toLowerCase())
+                );
+            }
+
 
             if (selectedBrands.length > 0) {
                 newFilteredProducts = newFilteredProducts.filter((product) =>
@@ -150,7 +159,9 @@ function Collection() {
 
     function updatecat() {
         
-        navigate(`/collection/${change.replace(/\s/g, '')}`)
+        // navigate(`/collection/${change.replace(/\s/g, '')}`)
+        
+        navigate(`/collection/${change}`)
 
     }
 
