@@ -1,0 +1,293 @@
+.collection{
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .inner_collection{
+        width: 95%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        .search_bar{
+          
+            
+             width: 100%;
+             height: 60px;
+            //  border: 2px solid red;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             
+             form{
+                width: 40%;
+                height: 40px;
+                // border: 2px solid black;
+           
+                border-radius: 25px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                input{
+                  width: 100%;
+                //   height: 100%;
+                  border: none;
+                  padding: 9px;
+                  outline: none;
+                  background-color: whitesmoke;
+                }
+                button{
+                    padding: 9px;
+                    border: none;
+                    background-color: whitesmoke;
+                    cursor: pointer;
+                    #searchicon{
+                        font-size: 1.4rem;
+                    }
+                }
+             }
+        }
+
+        .result_message{
+            width: 100%;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid black;
+            h1{
+                width: 95%;
+                
+
+            }
+        }
+        .filtericon{
+          
+            cursor: pointer;
+        }
+
+        .filter_and_productlist{
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            .filtericon{
+                display: none;
+            }
+
+            .filter_sectionc{
+                position: static;
+                flex: 1;
+                min-height: 600px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                gap: 30px;
+                border-right: 1px solid rgb(84, 83, 83);
+               
+                .brand{
+                    width: 100%;
+                 
+                    padding: 0px 10px;
+                    
+                    .cardian_filter{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        height: 40px;
+                       
+
+                    }
+
+                    label{
+                        margin: 0px 0px;
+                    }
+                    input{
+                        margin: 5px 5px;
+                    }
+                }
+                .brandc{
+                    width: 100%;
+                    height: 40px;
+                    // border: 2px solid red;
+                    padding: 0px 10px;
+                    // overflow: hidden;
+                    .cardian_filter{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        height: 40px;
+                    }
+                    label{
+                        display: none;
+                        margin: 0px 0px;
+                    }
+                    input{
+                        display: none;
+                        margin: 5px 5px;
+                    }
+                }
+                .reset{
+                    padding: 4px 10px;
+                    border-radius: 5px;
+                    border: none;
+                    background-color:  #4c93fd;
+                    color: white;
+                }
+                
+            }
+
+            .filter_section{
+                position: static;
+                flex: 1;
+                min-height: 600px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                gap: 30px;
+                border-right: 1px solid rgb(84, 83, 83);
+               
+                .brand{
+                    width: 100%;
+                  
+                    padding: 0px 10px;
+                    
+                    .cardian_filter{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        height: 40px;
+                       
+
+                    }
+
+                    label{
+                        margin: 0px 0px;
+                    }
+                    input{
+                        margin: 5px 5px;
+                    }
+                }
+                .brandc{
+                    width: 100%;
+                    height: 40px;
+                    // border: 2px solid red;
+                    padding: 0px 10px;
+                    // overflow: hidden;
+                    .cardian_filter{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        height: 40px;
+                    }
+                    label{
+                        display: none;
+                        margin: 0px 0px;
+                    }
+                    input{
+                        display: none;
+                        margin: 5px 5px;
+                    }
+                }
+                .reset{
+                    padding: 4px 10px;
+                    border-radius: 5px;
+                    border: none;
+                    background-color:  #4c93fd;
+                    color: white;
+                }
+                
+            }
+
+            
+
+            
+            .product_list{
+              
+                flex: 3;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+
+
+@media screen  and (max-width:600px){
+    .collection{
+        .inner_collection{
+            .search_bar{
+               form{
+                width: 60%;
+               }
+            }
+            .result_message{
+
+            }
+
+            .filter_and_productlist{
+                position: relative;
+                overflow-x: hidden;
+                // border: 2px solid red;
+                .filtericon{
+                    display: block;
+                    position: absolute;
+                    z-index: 20;
+                    top: 0px;
+                    left: 0px;
+                    font-size: 1.2rem;
+
+                }
+                .filter_section{
+                   position: absolute;
+                   background-color: white;
+                   z-index: 5;
+                   left: 0px;
+                   top: 30px;
+                   flex: 0;
+                   height: 700px;
+                   
+                }
+
+                .filter_sectionc{
+                    position: absolute;
+                    background-color: white;
+                    z-index: 5;
+                    left: -400px;
+                    top: 30px;
+                    flex: 0;
+                }
+               
+                .product_list{
+                    // border: 2px solid red;
+                    width: 150px;
+                }
+
+
+            }
+            
+
+           
+            
+        }
+    }
+
+}
